@@ -11,6 +11,9 @@
             HorizontalAlignment="Left" 
             Height="300" 
             VerticalAlignment="Top" 
-            Width="300"/>
+            Width="300">
+            <Image 
+                Source="C:\Users\linri\Desktop\Bilder\Bitmap.bmp"/>
+        </InkCanvas>
     </Grid>
 </UserControl>

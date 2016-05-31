@@ -8,7 +8,25 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid
         Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <ListView
+            Width="100"
+            Grid.Column="0"
+            ItemsSource="{Binding Path=Rows, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="80"
+                        Header="ID" 
+                        DisplayMemberBinding="{Binding Path=Text}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         <local:IdeaImageDisplay
+            Grid.Column="1"
             Background="White"
             HorizontalAlignment="Left" 
             Height="302" Margin="10,10,0,0" 
